@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: lobster, cursive;
+}
+
+body {
+    background-image: url("world.png");
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    perspective: 1000px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.cards:hover .card {
+    transform: rotateY(180deg);
+}
+
+.cards>div {
+    font-size: 25px;
+    height: 200px;
+    width: 200px;
+}
+
+.cards-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 35px;
+}
+
+.back {
+    background: linear-gradient(#f8da61, #ff5acd);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.front,
+.back   {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.front {
+    background: linear-gradient(#08aeea, #2af598);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.quiz-area {
+    background-color: rgba(173, 216, 230, 80%);
+    margin: 100px 0;
+    text-align: center;
+}
+
+
